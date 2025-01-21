@@ -1,0 +1,7 @@
+--constraint https://raw.githubusercontent.com/apache/airflow/constraints-2.9.2/constraints-3.10.txt
+
+apache-airflow[celery]==2.9.2
+apache-airflow[postgres]==2.9.2
+psycopg2-binary~=2.9.9  # required by Airflow/PostgreSQL metadatabase
+dynaconf[yaml,vault]>=3.1.0
+schematics~=2.1 # validate classes for job config

@@ -1,0 +1,16 @@
+FROM python:3.10 as bump-requirements
+
+RUN pip install --no-cache-dir pip-tools
+WORKDIR /app
+
+COPY requirements.airflow.in requirements.in ./
+RUN pip-compile --upgrade --output-file requirements.txt \
+  requirements.airflow.in requirements.in
+
+COPY requirements-dev.in ./
+RUN pip-compile --upgrade --output-file requirements-dev.txt \
+  requirements.airflow.in requirements.in requirements-dev.in
+
+FROM scratch as export-requirements
+COPY --from=bump-requirements /app/requirements.txt .
+COPY --from=bump-requirements /app/requirements-dev.txt .
