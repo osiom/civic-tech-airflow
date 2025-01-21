@@ -1,26 +1,39 @@
 import logging
+from datetime import datetime, timedelta
+
+from airflow.operators.python import PythonOperator
 
 from airflow import DAG
-from airflow.operators.python import PythonOperator
-from datetime import datetime
 
 logger = logging.getLogger("airflow.task")
 
-def greet():
+default_args = {
+    "owner": "osiom",
+    "depends_on_past": False,
+    "start_date": datetime(2025, 1, 1),
+    "email": ["matteo.osio1992@gmail.com"],
+    "email_on_failure": False,
+    "email_on_retry": False,
+    "retries": 1,
+    "retry_delay": timedelta(minutes=5)
+}
+
+
+def greets():
     logger.info("Hello, welcome to the Civic Tech Airflow environment!")
 
+
 with DAG(
-    owner_links={"osiom": "https://github.com/osiom/matteoosio.me"},
-    dag_id="civic_tech_greeting",
-    start_date=datetime(2025, 1, 1),
+    dag_id="civic-tech_greetings",
+    default_args=default_args,
     schedule_interval=None,  # No automatic scheduling; manual trigger
     catchup=False,
+    tags=["general-purpose"],
 ) as dag:
-
     # Define the task
     greeting_task = PythonOperator(
-        task_id="greet_task",
-        python_callable=greet,
+        task_id="greeting_task",
+        python_callable=greets,
     )
 
     greeting_task
