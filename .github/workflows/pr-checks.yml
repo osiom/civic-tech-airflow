@@ -2,7 +2,8 @@ name: PR Checks
 
 on:
   pull_request:
-    types: [opened, synchronize, reopened]  # Triggers on PR opened, updated, or reopened
+    branches:
+      - main
 
 jobs:
   lint-and-sort:
