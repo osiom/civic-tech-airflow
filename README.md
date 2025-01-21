@@ -70,6 +70,8 @@ make build-local
 
 After the docker image has been built remove the `.template` from the `.env.template` file and inject all the required environment variables in there.
 
+**PLEASE NOTE**: The fernet key and the webserver key needs to be generated!
+
 To spinup the instance of Airflow and start to execute the different ETL run:
 
 ```bash
