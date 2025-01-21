@@ -63,13 +63,13 @@ Ensure the following are installed on your system:
 
 In order to spin up the environment we first need to build the Docker image of our Airflow environment.
 
-In order to do so please execute:
-
 ```bash
 make build-local
 ```
 
-After the docker image has been built simply run
+After the docker image has been built remove the `.template` from the `.env.template` file and inject all the required environment variables in there.
+
+To spinup the instance of Airflow and start to execute the different ETL run:
 
 ```bash
 make spinup-local
