@@ -252,3 +252,9 @@ This project may use or include third-party libraries. Each of these libraries m
 - **Redis** is licensed under the [Redis Source Available License](https://opensource.org/licenses/Redislabs).
 
 Please check the respective library documentation for full licensing details.
+
+## Authors & Credits
+
+**Matteo Osio** - *Initial work & maintenance* 
+- GitHub: [@osiom](https://github.com/osiom)
+- Linkedin: [matteo osio](https://www.linkedin.com/in/matteoosio/)
