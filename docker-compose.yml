@@ -37,6 +37,7 @@ services:
       - .env  # Loads environment variables from .env
     volumes:
       - ./airflow/dags:/opt/airflow/dags  # Mount local DAGs folder
+      - ./airflow/logs:/opt/airflow/logs
     ports:
       - "8080:8080"
     command: >
@@ -55,7 +56,8 @@ services:
     env_file:
       - .env  # Loads environment variables from .env
     volumes:
-      - ./airflow/dags:/opt/airflow/dags  # Mount local DAGs folder      
+      - ./airflow/dags:/opt/airflow/dags  # Mount local DAGs folder 
+      - ./airflow/logs:/opt/airflow/logs     
     command: bash -c "airflow db init && airflow scheduler"
     networks:
       - airflow-network
