@@ -10,9 +10,9 @@ The setup uses Docker Compose to orchestrate services, including two Celery work
 
 ## Table of Contents
 
-1. [Introduction](#introduction)
-2. [Features](#features)
-3. [Prerequisites](#prerequisites)
+1. [Introduction](#1-introduction)
+2. [Features](#2-features)
+3. [Prerequisites](#3-prerequisites)
 4. [Start the Environment](#starting-the-environment)
 5. [Usage](#usage)
     - [Accessing the Web UI](#accessing-the-web-ui)
@@ -47,7 +47,6 @@ The overall idea is to have a centralise orchestrator used to ingest open-data.
 ## 3. Prerequisites
 
 Ensure the following are installed on your system:
-
 - Docker (>= 20.10)
 - Docker Compose (>= 2.0)
 - Makefile installed
@@ -102,7 +101,7 @@ You can monitor DAG execution, view logs, and track task statuses in the Airflow
 │   ├── requirements.airflow.txt # Python dependencies for Airflow
 ├── docker-compose.yml       # Docker Compose configuration
 ├── .env                     # Environment variables for Airflow
-
+```
 
 ## 7. Useful Commands
 
