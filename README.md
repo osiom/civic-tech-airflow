@@ -13,14 +13,19 @@ The setup uses Docker Compose to orchestrate services, including two Celery work
 1. [Introduction](#1-introduction)
 2. [Features](#2-features)
 3. [Prerequisites](#3-prerequisites)
-4. [Start the Environment](#starting-the-environment)
-5. [Usage](#usage)
+4. [Start the Environment](#4-setup-and-start-the-environment)
+5. [Usage](#5-usage)
     - [Accessing the Web UI](#accessing-the-web-ui)
     - [Triggering a DAG](#triggering-a-dag)
     - [Monitoring Tasks](#monitoring-tasks)
-6. [Folder Structure](#folder-structure)
-7. [Useful Commands](#useful-commands)
-8. [License](#license)
+6. [Folder Structure](#6-folder-structure)
+7. [Useful Commands](#7-useful-commands)
+    - [Managing Airflow Services](#managing-airflow-services)
+    - [Managing DAGs](#managing-dags)
+    - [Managing Tasks](#managing-tasks)
+    - [Database and Connections](#database-and-connections)
+    - [Other Userful Commands](#other-useful-commands)
+8. [License](#8-license)
 
 ---
 
@@ -230,7 +235,7 @@ You can monitor DAG execution, view logs, and track task statuses in the Airflow
 
 This project is licensed under the terms of the **Apache License 2.0**.
 
-### 10.1. Apache License 2.0
+### 8.1. Apache License 2.0
 
 You may not use this file except in compliance with the License. You may obtain a copy of the License at:
 
@@ -238,7 +243,7 @@ You may not use this file except in compliance with the License. You may obtain 
 
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an **"AS IS" BASIS**, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
 
-### 10.2. Third-party Libraries
+### 8.2. Third-party Libraries
 
 This project may use or include third-party libraries. Each of these libraries may be subject to their own license terms, and you should ensure compliance with those licenses when using or redistributing them.
 
