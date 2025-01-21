@@ -35,3 +35,10 @@ Summarising, to add additional Python libraries to your Airflow environment:
      docker-compose exec airflow-webserver bash
      ```
      Navigate to the `airflow.cfg` file, make the necessary changes, and restart the container.
+
+- **Code Quality Check**:  
+  Before pushing a PR there's the possibility to perform basic PEP checks by running:
+  ```bash
+  make check
+  ```
+  This command will perform [isort](https://pycqa.github.io/isort/) and [flake8](https://flake8.pycqa.org/en/latest/) checks on the `airflow/` folder to make sure code standards are followed.
