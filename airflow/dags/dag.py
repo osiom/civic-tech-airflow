@@ -1,13 +1,18 @@
+import logging
+
 from airflow import DAG
 from airflow.operators.python import PythonOperator
 from datetime import datetime
 
+logger = logging.getLogger("airflow.task")
+
 def greet():
-    print("Hello, welcome to the Civic Tech Airflow environment!")
+    logger.info("Hello, welcome to the Civic Tech Airflow environment!")
 
 with DAG(
+    owner_links={"osiom": "https://github.com/osiom/matteoosio.me"},
     dag_id="civic_tech_greeting",
-    start_date=datetime(2023, 1, 1),
+    start_date=datetime(2025, 1, 1),
     schedule_interval=None,  # No automatic scheduling; manual trigger
     catchup=False,
 ) as dag:
